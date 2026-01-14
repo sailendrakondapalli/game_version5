@@ -29,6 +29,11 @@ app.use(cors({
   credentials: true
 }));
 
+app.get('/', (req, res) => {
+  res.send("🎮 Game server is running!");
+});
+
+
 app.use(express.json());
 
 const matchManager = new MatchManager();
